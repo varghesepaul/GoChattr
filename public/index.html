@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://webrtc.googlecode.com/svn-history/r3905/trunk/samples/js/base/adapter.js"></script>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Bronnection</title>
+</head>
+<body>
+  <header class="header">
+    <h2>Bro<span>nnection</span></h2>
+    <h3 data-username></h3>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="" data-log-button><img src="img/icon-log.svg" alt=""></a></li>
+        <li><a href="" data-chat-button><img src="img/icon-chat2.svg" alt=""></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content">
+    <section class="username-box" data-username-box>
+      <input type="text" data-username-input placeholder="Choose a username">
+      <button data-get-in-button>Get in!</button>
+    </section>
+
+    <section class="media" data-media-box>
+      <video data-local-video class="local-video" muted="muted" autoplay></video>
+      <video data-remote-video class="remote-video" autoplay></video>
+    </section>
+  </section>
+
+  <section data-chat-panel class="chat">
+    <section class="chat-messages" data-chat-messages>
+    </section>
+
+    <footer class="chat-footer">
+      <input type="text" data-chat-input placeholder="Say something...">
+    </footer>
+  </section>
+
+  <section data-log-panel class="log"></section>
+
+  <script src="js/config.js"></script>
+  <script src="js/interface.js"></script>
+  <script src="js/bronnection.js"></script>
+  <script src="js/trace.js"></script>
+  <script src="js/client.js"></script>
+  <script src="js/signaling_server.js"></script>
+  <script>
+    $(document).ready(function() {
+      var bro = new app.Bronnection();
+      new app.Interface(bro);
+    })
+  </script>
+</body>
+</html>

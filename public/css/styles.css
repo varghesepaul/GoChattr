@@ -1,0 +1,266 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+/* ===============================================
+ * HEADER
+ *================================================*/
+.header {
+  background-color: #3d85cb;
+  height: 60px;
+  position: relative;
+}
+
+.header h2,
+.header h3 {
+  margin: 0;
+  line-height: 60px;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.header h3 {
+  color: #aec9e3;
+}
+
+.header h2 span {
+  color: #aec9e3;
+}
+
+.header .nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.header .nav ul {
+  margin: 10px;
+}
+
+.header .nav li {
+  list-style: none;
+  float: left;
+}
+
+.header .nav a {
+  display: block;
+  opacity: .5;
+  padding: 0 10px;
+}
+
+.header .nav a:hover {
+  opacity: .7;
+}
+
+.header .nav a img {
+  height: 36px;
+}
+
+/* ===============================================
+ * MAIN CONTAINER
+ *================================================*/
+.content {
+  width: 70%;
+  position: relative;
+  padding: 10px;
+}
+
+.username-box input[type="text"] {
+  padding: 15px;
+  font-size: 22px;
+  border: 1px solid #E1E1E1;
+}
+
+.username-box button {
+  padding: 15px;
+  font-size: 22px;
+  background-color: #3d85cb;
+  color: #fff;
+  border: none;
+}
+
+.media {
+  display: none;
+}
+
+.local-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #F4F4F4;
+  width: 150px;
+  height: 112px;
+  margin: 10px;
+  border-right: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+}
+
+.remote-video {
+  width: 780px;
+  height: 585px;
+  /*margin: 5px;*/
+}
+
+/* ===============================================
+ * LOG
+ *================================================*/
+.log {
+  display: none;
+  font-family: monospace;
+  overflow-x: scroll;
+}
+
+.log p {
+  margin: 0;
+  padding: 8px;
+}
+
+.log p:nth-child(even) {
+  background-color: #f0f0f0;
+}
+/* ===============================================
+ * CHAT PANEL
+ *================================================*/
+ .chat {
+  /*display: none;*/
+ }
+
+.chat, .log {
+  background-color: #fdfdfd;
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  right: 0;
+  width: 28%;
+  border-left: 1px solid #F4F4F4;
+}
+
+.chat-messages {
+  position: absolute;
+  top: 0;
+  bottom: 46px;
+  right: 0;
+  left: 0;
+  overflow-x: scroll;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.chat-messages .message {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  min-height: 36px;
+  border-bottom: 1px solid #F4F4F4;
+}
+.chat-messages .message strong {
+  color: #3D85CB;
+}
+
+.chat-messages .message.my-message strong {
+  color: #6CB430;
+}
+
+.chat-messages .message strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.chat-messages .message:last-child {
+  border-bottom: none;
+}
+
+/*.chat-messages .message:before {
+  display: inline-block;
+  border-radius: 28px;
+  font-size: 12px;
+  margin-right: 5px;
+  color: #FFF;
+  position: absolute;
+  top: 22px;
+  left: 8px;
+}
+
+.chat-messages .message.server-message:before {
+  background-color: #DD4B34;
+  opacity: 0.3;
+  padding: 11px 10px;
+  content: 'Srv';
+}
+
+.chat-messages .message.my-message:before {
+  background-color: #0B9C57;
+  opacity: 0.3;
+  padding: 11px 8px;
+  content: 'You';
+}
+
+.chat-messages .message.his-message:before {
+  background-color: #3D6AAE;
+  opacity: 0.3;
+  padding: 11px 8px;
+  content: 'Him';
+}*/
+
+.chat-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top: 1px solid #F4F4F4;
+}
+
+.chat-footer input {
+  width: 300px;
+  border: none;
+  padding: 14px 14px 14px 40px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #888;
+  background: #fff url('../img/icon-chat.svg') no-repeat 2% center;
+  background-size: 22px;
+}
+
+/* ===============================================
+ * STATS
+ *================================================
+.main-container.stats {
+  right: 0;
+  padding: 20px;
+}
+
+.header.stats {
+  position: relative;
+}
+
+
+.users-connected-stats h3 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #DDD;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #DDD;
+}
+
+table thead tr th {
+  width: 150px;
+  padding: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#EAEAEA));
+}
+
+table th:first-child {
+  width: 200px;
+}
+
+table td {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #e0e0e0;
+}

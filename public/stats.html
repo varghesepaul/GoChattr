@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Bronnection Statistics</title>
+</head>
+<body>
+  <header class="header stats">
+    <h3>Bronnenction Statistics</h3>
+  </header>
+
+  <section class="main-container stats">
+    <div class="box users-connected-stats">
+      <h3>Rooms</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Room #</th>
+            <th>Clients</th>
+          </tr>
+        </thead>
+        <tbody data-list-rooms>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="js/stats.js"></script>
+
+  <script>
+    var stats = new app.Stats();
+  </script>
+</body>
+</html>
